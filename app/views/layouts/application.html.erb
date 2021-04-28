@@ -21,6 +21,10 @@
   </head>
 
   <body>
+    <%= render 'statics/preloader' %>
+    <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= render 'layouts/js' %>
   </body>
 </html>

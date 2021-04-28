@@ -904,7 +904,9 @@ li {
 	color: #000;
 	position: relative
 }
-
+#sidenav-toggle{
+	cursor : pointer;
+}
 .header_action ul li a span {
 	width: 15px;
 	height: 15px;
@@ -1351,11 +1353,11 @@ li {
 }
 
 .slider-2 .single-slider {
-	background: url(../img/slider-1.jpeg)
+	background-image: image-url('photo/IMG_0131.JPG');
 }
 
 .slider-1 .single-slider {
-	background: url(../img/slider-2.jpeg)
+	background-image: image-url('photo/IMG_0132.JPG');
 }
 
 .slider-container:after {
@@ -2150,7 +2152,7 @@ li {
 }
 
 .peulis-awesome-tour-area:before {
-	background-image: url("../img/awesome_bg.jpg");
+	background-image: url("img/awesome_bg.jpg");
 	background-position: center center;
 	background-size: cover;
 	bottom: 0;
@@ -2162,7 +2164,7 @@ li {
 }
 
 .peulis-awesome-tour-area:after {
-	background: url("../img/awesome_bg_2.png") no-repeat scroll 0 0;
+	background: url("img/awesome_bg_2.png") no-repeat scroll 0 0;
 	bottom: 0;
 	content: "";
 	right: 0;
