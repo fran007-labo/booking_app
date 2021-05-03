@@ -1353,11 +1353,11 @@ li {
 }
 
 .slider-2 .single-slider {
-	background-image: image-url('photo/IMG_0131.JPG');
+	background-image: image-url('photo/macArthur.JPG');
 }
 
 .slider-1 .single-slider {
-	background-image: image-url('photo/IMG_0132.JPG');
+	background-image: image-url('photo/moraine.JPG');
 }
 
 .slider-container:after {
@@ -2152,7 +2152,7 @@ li {
 }
 
 .peulis-awesome-tour-area:before {
-	background-image: url("img/awesome_bg.jpg");
+	background: url("photo/macArthur.JPG");
 	background-position: center center;
 	background-size: cover;
 	bottom: 0;
@@ -2164,7 +2164,7 @@ li {
 }
 
 .peulis-awesome-tour-area:after {
-	background: url("img/awesome_bg_2.png") no-repeat scroll 0 0;
+	// background: url("photo/star.JPG") no-repeat scroll 0 0;
 	bottom: 0;
 	content: "";
 	right: 0;
@@ -2735,7 +2735,7 @@ p.date {
 ==================================================*/
 
 .peulis-footer-area {
-	background: url("../img/footerbanner.jpg") no-repeat scroll 0 0/cover;
+	background: url("img/footerbanner.jpg") no-repeat scroll 0 0/cover;
 	position: relative;
 	z-index: 1
 }

@@ -50,9 +50,7 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="site-logo">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo.png" alt="Peulis" />
-                                    </a>
+                                    <%= link_to image_tag("img/logo.png", alt: "Peulis"), root_path %>
                                 </div>
                                 <!-- Responsive Menu Start -->
                                 <div class="peulis-responsive-menu"></div>
@@ -62,7 +60,7 @@
                                 <div class="mainmenu">
                                     <nav>
                                         <ul id="navigation_menu">
-                                            <li class="active"><a href="index.html">Home</a></li>
+                                            <li class="active"><%= link_to "Home", root_path %></li>
                                             <li>
                                                 <a href="#">Pages</a>
                                                 <ul>
@@ -87,7 +85,7 @@
                                                 <a href="#">tours</a>
                                                 <ul>
                                                     <li><a href="tour-sidebar.html">Tour Sidebar</a></li>
-                                                    <li><a href="tour-details.html">Tour Details</a></li>
+                                                    <li><%= link_to "Tour Details", tour_detail_path %></li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -106,7 +104,7 @@
                                                     <li><a href="checkout.html">Checkout</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><%= link_to "contact", new_contacts_path %></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -128,51 +126,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="header_cart">
-                                            <a href="#">
-                                                <span>0</span>
-                                                <i class="fa fa-shopping-bag"></i>
-                                            </a>
-                                            <div class="cart_box_hover">
-                                                <div class="single-cart">
-                                                    <a class="product-remove" href="#">
-                                                        <i class="fa fa-times"></i>
-                                                    </a>
-                                                    <div class="cart-pro-image">
-                                                        <img src="assets/img/cart-1.png" alt="cart" />
-                                                    </div>
-                                                    <div class="cart-pro-info">
-                                                        <a href="#">
-                                                            <h4>Tour package 1</h4>
-                                                        </a>
-                                                        <p>Tickets 2</p>
-                                                        <h5>$1650.00</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="single-cart">
-                                                    <a class="product-remove" href="#">
-                                                        <i class="fa fa-times"></i>
-                                                    </a>
-                                                    <div class="cart-pro-image">
-                                                        <img src="assets/img/cart-1.png" alt="cart" />
-                                                    </div>
-                                                    <div class="cart-pro-info">
-                                                        <a href="#">
-                                                            <h4>Tour package 1</h4>
-                                                        </a>
-                                                        <p>Tickets 2</p>
-                                                        <h5>$1650.00</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="single-cart subtotal">
-                                                    <p>Subtotal :<span>$3300</span></p>
-                                                </div>
-                                                <div class="cart-action">
-                                                    <a href="cart.html" class="viewcart">view cart</a>
-                                                    <a href="checkout.html" class="checkout-btn">Checkout</a>
-                                                </div>
-                                            </div>
-                                        </li>
+                                    
                                         <li><div id="sidenav-toggle"><i class="fa fa-bars"></i></div></li>
                                     </ul>
                                 </div>
