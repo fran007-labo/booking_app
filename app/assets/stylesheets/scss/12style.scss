@@ -2449,7 +2449,17 @@ li {
 ==================================================*/
 
 .peulis-discount-area {
-	padding-top: 70px;
+	width:100%;
+	height: 100%;
+	background: url("./photo/macArthur.JPG");
+	background-size:cover;
+	background-attachment: fixed;
+	text-align: center;
+	position: relative;
+	
+	display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .discount-box {
@@ -2602,6 +2612,12 @@ li {
 .peulis-blog-page-area {
 	padding-top: 70px
 }
+.peulis-blog-area{
+	color: white;
+	background: url("./photo/macArthur.JPG");
+	background-size:cover;
+	background-attachment: fixed;
+}
 
 .single-blog-item {
 	margin-top: 30px;
@@ -2735,7 +2751,7 @@ p.date {
 ==================================================*/
 
 .peulis-footer-area {
-	background: url("img/footerbanner.jpg") no-repeat scroll 0 0/cover;
+	background: url("1920*570/footer_background_1920*570.jpeg") no-repeat scroll 0 0/cover;
 	position: relative;
 	z-index: 1
 }

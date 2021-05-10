@@ -24,9 +24,4 @@ RSpec.describe Contact, type: :model do
     expect(contact.errors[:email]).to include("can't be blank")
   end
 
-  it "returns a contact's full name as a string" do
-    contact = FactoryBot.build(:contact, name: "John", : "Doe")
-    expect(user.name).to eq "John Doe" 
-  end
-
 end
