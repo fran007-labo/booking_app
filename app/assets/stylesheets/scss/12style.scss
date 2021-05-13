@@ -220,6 +220,7 @@ li {
 .site-heading p{
     font-size: 16px
 }
+
 .site-heading h2 {
 	font-family: 'Ubuntu', sans-serif;
 	color: #111;
@@ -833,7 +834,7 @@ li {
 }
 
 .mainmenu ul {
-	text-align: center;
+	text-align: right;
 }
 
 .mainmenu ul li {
@@ -1486,12 +1487,11 @@ li {
 	display: none
 }
 
-.banner-welcome form {
-	background: #fff;
+.banner-welcome .booking {
 	box-shadow: 0 3px 13px 0 rgba(0, 0, 0, .07);
 	margin-top: 40px;
 	height: 70px;
-	text-align: left;
+	text-align: center;
 	padding-left: 10px;
 	position: relative;
 }
@@ -2676,7 +2676,7 @@ p.date {
 }
 
 .blog-desc h3 {
-	color: #111;
+	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 500;
 	font-size: 26px;

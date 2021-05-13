@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resource :contacts, only: [:create] do
     get "/thanks" => "contacts#thanks"
   end
+  get '*path', controller: 'application', action: 'render_404'
 end
