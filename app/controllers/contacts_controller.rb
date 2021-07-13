@@ -4,10 +4,10 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.create(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
-      redirect_to thanks_contacts_path
+      redirect_to thanks_path
     else
       render :new
     end
@@ -18,6 +18,6 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:name, :email, :content)
+    params.require(:contact).permit(:name, :email, :phone, :content)
   end
 end

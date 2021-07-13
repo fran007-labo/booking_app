@@ -27,7 +27,9 @@
                             </div>
                             <div class="booking">
                                 <div class="tour-details">
-                                    <a href="tour-details.html" class="w-25 py-4"><i class="fa fa-flag"></i> Book Now</a>
+                                    <%= link_to tour_detail_path, class: "w-25 py-4" do %> 
+                                      <i class="fa fa-flag"></i> Book now
+                                    <% end %>
                                 </div>
                             </div>
                         </div>

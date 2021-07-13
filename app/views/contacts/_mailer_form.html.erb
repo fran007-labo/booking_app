@@ -1,10 +1,11 @@
-<%= form_with(model: @contact, local: true, id: :contactForm, name: :sentMessage, novalidate: :novalidate) do |f| %>
+<%= form_with model: @contact, url: contacts_path, method: :post, id: :contactForm, name: :sentMessage, novalidate: :novalidate,local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <div class="row align-items-stretch mb-5">
     <div class="col-md-6">
       <div class="form-group">
         <%= f.text_field :name, class: "form-control", id: "name", type: "text", placeholder: "Your Name", required: true %>
         <p class="help-block text-danger"></p>
-    </div>
+      </div>
       <div class="form-group">
         <%= f.text_field :email, class: "form-control", id: "email", type: "email", placeholder: "Your email", required: true %>
         <p class="help-block text-danger"></p>
@@ -14,15 +15,17 @@
         <p class="help-block text-danger"></p>
       </div>
     </div>
+    
     <div class="col-md-6">
       <div class="form-group form-group-textarea mb-md-0">
-        <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+        <%= f.text_area :content, class:"form-control", id: "message", placeholder: "Your Message please", required: true %>
         <p class="help-block text-danger"></p>
       </div>
     </div>
   </div>
   <div class="text-center">
     <div id="success"></div>
-    <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+    <%# <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button> %>
+    <%= f.submit "Send Message", id: "sendMessageButton", class: "btn btn-primary btn-xl text-uppercase" %>
   </div>
 <% end %>

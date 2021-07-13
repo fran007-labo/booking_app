@@ -6,4 +6,6 @@ class Contact < ApplicationRecord
                       length:{maximum: 255},
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: true
+  validates :phone, presence: true
+
 end

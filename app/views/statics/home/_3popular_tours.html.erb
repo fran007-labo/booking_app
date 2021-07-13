@@ -10,302 +10,67 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">Glacier Walk Combo</a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    5 days / 6 nights
-                                </p>
+            <% @tours.each do | tour | %>
+                <div class="col-lg-4">
+                    <div class="single-popular-tour">
+                        <div class="popular-tour-image">
+                            <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
+                            <div class="popular-tour-hover">
+                                <ul>
+                                    <li><i class="fa fa-eye"></i></li>
+                                    <li><i class="fa fa-heart-o"></i></li>
+                                    <li><i class="fa fa-share-alt"></i></li>
+                                </ul>
                             </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
+                        </div>
+                        <div class="popular-tour-desc">
+                            <div class="tour-desc-top">
+                                <%= link_to tour_detail_path do %>
+                                    <h3><%= tour.name %></h3> 
+                                <% end %>
+                                <div class="tour_duration">
+                                    <p>
+                                        <i class="fa fa-hourglass-half"></i>
+                                        5 days / 6 nights
+                                    </p>
                                 </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$1610.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">The Splendor of Manali </a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    5 days / 6 nights
-                                </p>
-                            </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
+                                <div class="tour-desc-heading">
+                                    <div class="tour-rating">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tour_feature">
+                                        <%= link_to tour_detail_path do %>
+                                            <i class="fa fa-plane"></i>
+                                        <% end %>
+                                        <%= link_to tour_detail_path do %>
+                                            <i class="fa fa-building-o"></i>
+                                        <% end %>
+                                        <%= link_to tour_detail_path do %>
+                                            <i class="fa fa-cutlery"></i>
+                                        <% end %>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$470.00</p>
+                            <div class="tour-desc-bottom">
+                                <div class="tour-details">
+                                    <%= link_to tour_detail_path do %>
+                                        <i class="fa fa-flag"></i> Book Now
+                                    <% end %>
+                                </div>
+                                <div class="tour-desc-price">
+                                    <p>$ <%= tour.price %></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">Great Britain Travel</a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    5 days / 6 nights
-                                </p>
-                            </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$820.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">Beauty of Tajmahal</a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    5 days / 6 nights
-                                </p>
-                            </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$1170.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">Venice Tour - Italy </a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    3 days / 4 nights
-                                </p>
-                            </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$980.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-popular-tour">
-                    <div class="popular-tour-image">
-                        <img src="assets/photo/moraine.JPG" alt="Popular Tours" />
-                        <div class="popular-tour-hover">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="popular-tour-desc">
-                        <div class="tour-desc-top">
-                            <h3><a href="tour-details.html">Super Maldives Trip</a></h3>
-                            <div class="tour_duration">
-                                <p>
-                                    <i class="fa fa-hourglass-half"></i>
-                                    5 days / 6 nights
-                                </p>
-                            </div>
-                            <div class="tour-desc-heading">
-                                <div class="tour-rating">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="tour_feature">
-                                    <a href="#"><i class="fa fa-plane"></i></a>
-                                    <a href="#"><i class="fa fa-building-o"></i></a>
-                                    <a href="#"><i class="fa fa-cutlery"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tour-desc-bottom">
-                            <div class="tour-details">
-                                <a href="tour-details.html"><i class="fa fa-flag"></i> Book Now</a>
-                            </div>
-                            <div class="tour-desc-price">
-                                <p>$1020.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <% end %>
         </div>
     </div>
 </section>

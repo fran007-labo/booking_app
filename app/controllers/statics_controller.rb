@@ -1,5 +1,6 @@
 class StaticsController < ApplicationController
   def home
+    @tours = Tour.all.limit(6)
     render :file => "/app/views/statics/home/home.html.erb"
   end
 
